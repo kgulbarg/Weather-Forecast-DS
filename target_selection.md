@@ -1,18 +1,25 @@
-### Forecasting Target Selection
+## Forecasting Target Selection
 
-Weather is a multivariate phenomenon rather than a single measurable quantity. Features such as temperature, humidity, pressure, precipitation, cloud cover, and wind conditions are physically interconnected and collectively describe the overall weather state.
+Weather is inherently a multivariate phenomenon rather than a single measurable quantity. Variables such as temperature, humidity, atmospheric pressure, precipitation, cloud cover, and wind conditions are physically interconnected and together describe the overall state of the atmosphere.
 
-Initially, I considered the possibility of forecasting a "composite weather" representation. However, forecasting an abstract combined weather variable would require an advanced multivariate or coupled forecasting framework capable of modeling the dependencies between multiple atmospheric variables simultaneously.
+Initially, the possibility of forecasting a *composite weather representation* was considered. However, predicting an abstract combined weather variable would require a more advanced multivariate or coupled forecasting framework capable of simultaneously modeling complex dependencies among multiple atmospheric variables.
 
-However, to maintain interpretability and provide a clear comparison between forecasting techniques within the scope of this assessment, the forecasting task focuses primarily on a single target variable:
+Another forecasting formulation explored was weather-condition classification using the `condition_text` feature, since it provides a broader semantic description of overall weather conditions rather than representing a single atmospheric measurement.
 
-- `temperature_celsius`
+* a large number of categorical weather states,
+* significant class imbalance,
+* and inconsistencies in condition labels.
 
-while incorporating other weather-related variables such as humidity, pressure, cloud cover, precipitation, and wind measurements as predictive features.
+To maintain interpretability and enable a clear comparison between forecasting techniques within the scope of this assessment, the problem was therefore simplified to forecasting a single continuous target variable:
 
-This approach:
-- simplifies model evaluation and comparison,
-- enables clearer interpretation of forecasting performance,
-- while still leveraging the multivariate nature of weather through the feature set.
+* `temperature_celsius`
 
-Additional weather variables remain important during exploratory analysis and anomaly detection due to their interdependent behavior.
+At the same time, other weather-related variables — including humidity, pressure, cloud cover, precipitation, and wind measurements — are retained as predictive input features to preserve the multivariate nature of the dataset.
+
+This formulation:
+
+* simplifies model evaluation and comparison,
+* improves interpretability of forecasting performance,
+* while still leveraging relationships among multiple atmospheric variables through feature engineering.
+
+Although temperature serves as the primary forecasting target, the remaining weather variables continue to play an important role during exploratory data analysis, correlation analysis, and anomaly detection due to their strong interdependent behavior.
