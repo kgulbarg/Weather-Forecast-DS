@@ -4,7 +4,7 @@
    ├── Missing Values
    ├── Missing Values
    ├── Missing Values
-   └── global_weather_cleaned.csv
+   └── weather_validated.csv
 
 2. EDA Domain Exploration
    ├── Weather Phenomena Analysis
@@ -20,4 +20,19 @@
    │   ├── Isolation Forest
    │   ├── PCA Visualization
    │   └── SHAP Interpretation
-   └── global_weather_features.csv
+   └── weather_cleaned.csv
+
+4. Feature Engineering
+   ├── Derived Features
+   ├── Climate Zone Feature
+   ├── Cyclical Time Features
+   ├── Encoding
+   ├── Scaling / Normalization
+   ├── Feature Selection
+   └── weather_features.csv
+
+5. Modeling
+   ├── Forecasting
+   ├── Classification
+   └── Evaluation
+   
